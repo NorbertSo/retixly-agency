@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Ekspert Base & BaseLinker - Automatyzacja E-commerce">
     <meta property="og:description" content="Kompleksowe usługi Base i BaseLinker - wdrożenia, automatyzacja, integracje. 6+ lat doświadczenia.">
-    <meta property="og:url" content="https://yourdomain.github.io">
+    <meta property="og:url" content="https://retixly.agency">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
     
     <!-- Performance & Security -->
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://yourdomain.github.io">
+    <link rel="canonical" href="https://retixly.agency">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#6366f1">
     
@@ -36,7 +36,7 @@
         "@type": "ProfessionalService",
         "name": "Base & BaseLinker Expert",
         "description": "Kompleksowe usługi Base i BaseLinker - wdrożenia, automatyzacja, integracje e-commerce",
-        "url": "https://yourdomain.github.io",
+        "url": "https://retixly.agency",
         "serviceType": "E-commerce Automation",
         "areaServed": "Poland",
         "hasOfferCatalog": {
@@ -68,7 +68,7 @@
         :root {
             --primary: #6366f1;
             --primary-light: #818cf8;
-            --primary-dark: #4338ca;
+            --primary-dark: #3730a3;
             --secondary: #0f172a;
             --accent: #f59e0b;
             --success: #10b981;
@@ -76,18 +76,18 @@
             --warning: #f59e0b;
             
             --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #64748b;
+            --text-secondary: #374151;
+            --text-muted: #6b7280;
             --text-inverse: #ffffff;
             
             --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-tertiary: #f1f5f9;
-            --bg-glass: rgba(255, 255, 255, 0.1);
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --bg-glass: rgba(255, 255, 255, 0.9);
             --bg-dark: #0f172a;
             
-            --border: #e2e8f0;
-            --border-light: #f1f5f9;
+            --border: #e5e7eb;
+            --border-light: #f3f4f6;
             
             --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -97,7 +97,7 @@
             --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
             
             --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             --gradient-glow: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
             --gradient-mesh: radial-gradient(circle at 20% 50%, #6366f1 0%, transparent 50%), 
@@ -129,14 +129,14 @@
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --text-primary: #f8fafc;
-                --text-secondary: #cbd5e1;
-                --text-muted: #94a3b8;
-                --bg-primary: #0f172a;
-                --bg-secondary: #1e293b;
-                --bg-tertiary: #334155;
-                --border: #334155;
-                --border-light: #475569;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --text-muted: #9ca3af;
+                --bg-primary: #111827;
+                --bg-secondary: #1f2937;
+                --bg-tertiary: #374151;
+                --border: #374151;
+                --border-light: #4b5563;
             }
         }
 
@@ -232,7 +232,7 @@
             }
         }
 
-        /* FLOATING PARTICLES - Reduced on mobile */
+        /* ENHANCED FLOATING PARTICLES */
         .particles {
             position: fixed;
             top: 0;
@@ -249,15 +249,15 @@
             height: 3px;
             background: var(--primary);
             border-radius: 50%;
-            animation: float 20s infinite linear;
-            opacity: 0.1;
+            animation: float 25s infinite linear;
+            opacity: 0.15;
         }
 
         @media (max-width: 768px) {
             .particle {
                 width: 2px;
                 height: 2px;
-                opacity: 0.05;
+                opacity: 0.08;
             }
         }
 
@@ -267,10 +267,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.1;
+                opacity: 0.15;
             }
             90% {
-                opacity: 0.1;
+                opacity: 0.15;
             }
             100% {
                 transform: translateY(-10vh) rotate(360deg);
@@ -278,20 +278,101 @@
             }
         }
 
-        /* MORPHING SHAPES - Simplified on mobile */
+        /* ENHANCED INTERACTIVE BACKGROUND */
+        .interactive-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-glow);
+            opacity: 0.1;
+            animation: floatOrb 20s ease-in-out infinite;
+            filter: blur(60px);
+        }
+
+        .bg-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            left: 10%;
+            animation-delay: -5s;
+        }
+
+        .bg-orb:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            top: 60%;
+            right: 10%;
+            animation-delay: -10s;
+            background: var(--gradient-accent);
+        }
+
+        .bg-orb:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            left: 30%;
+            animation-delay: -15s;
+            background: var(--gradient-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .bg-orb {
+                opacity: 0.05;
+                filter: blur(40px);
+            }
+            
+            .bg-orb:nth-child(1) {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .bg-orb:nth-child(2) {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .bg-orb:nth-child(3) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @keyframes floatOrb {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(20px) rotate(240deg);
+            }
+        }
+
+        /* MORPHING SHAPES */
         .morphing-shape {
             position: absolute;
             border-radius: 50%;
             background: var(--gradient-mesh);
-            opacity: 0.1;
-            animation: morph 15s ease-in-out infinite;
-            filter: blur(40px);
+            opacity: 0.08;
+            animation: morph 18s ease-in-out infinite;
+            filter: blur(50px);
         }
 
         @media (max-width: 768px) {
             .morphing-shape {
-                opacity: 0.05;
-                filter: blur(20px);
+                opacity: 0.04;
+                filter: blur(30px);
             }
         }
 
@@ -316,10 +397,10 @@
 
         /* GLASS MORPHISM CONTAINERS */
         .glass {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--bg-glass);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: var(--border-radius-2xl);
             position: relative;
             overflow: hidden;
@@ -327,8 +408,9 @@
 
         @media (max-width: 768px) {
             .glass {
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                background: rgba(255, 255, 255, 0.95);
             }
         }
 
@@ -339,7 +421,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
         }
 
         /* MODERN TYPOGRAPHY */
@@ -351,12 +433,12 @@
         }
 
         .text-glow {
-            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
         }
 
         @media (max-width: 768px) {
             .text-glow {
-                text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+                text-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
             }
         }
 
@@ -402,6 +484,7 @@
         .grid {
             display: grid;
             gap: var(--spacing-lg);
+            justify-items: center;
         }
 
         .grid-1 { grid-template-columns: 1fr; }
@@ -429,17 +512,18 @@
 
         .grid-auto { 
             grid-template-columns: 1fr;
+            justify-items: stretch;
         }
 
         @media (min-width: 640px) {
             .grid-auto { 
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
         }
 
         @media (min-width: 1024px) {
             .grid-auto { 
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
         }
 
@@ -533,7 +617,7 @@
 
         .nav-link {
             position: relative;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-weight: 500;
             padding: var(--spacing-sm) var(--spacing-md);
@@ -617,12 +701,12 @@
             right: 0;
             bottom: 0;
             background: var(--gradient-mesh);
-            opacity: 0.6;
+            opacity: 0.7;
         }
 
         @media (min-width: 768px) {
             .hero-bg {
-                opacity: 0.8;
+                opacity: 0.9;
             }
         }
 
@@ -636,7 +720,7 @@
         }
 
         .hero-shapes .morphing-shape:nth-child(1) {
-            top: 10%;
+            top: 15%;
             left: 5%;
             width: 200px;
             height: 200px;
@@ -644,7 +728,7 @@
         }
 
         .hero-shapes .morphing-shape:nth-child(2) {
-            top: 60%;
+            top: 65%;
             right: 5%;
             width: 150px;
             height: 150px;
@@ -652,7 +736,7 @@
         }
 
         .hero-shapes .morphing-shape:nth-child(3) {
-            bottom: 20%;
+            bottom: 25%;
             left: 20%;
             width: 100px;
             height: 100px;
@@ -711,9 +795,9 @@
             align-items: center;
             gap: var(--spacing-sm);
             padding: var(--spacing-sm) var(--spacing-md);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: var(--border-radius-3xl);
             color: var(--text-inverse);
             font-size: 0.8rem;
@@ -732,7 +816,7 @@
 
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+            50% { opacity: 0.9; }
         }
 
         .hero h1 {
@@ -808,7 +892,7 @@
 
         .hero p {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: var(--spacing-xl);
             max-width: 100%;
             margin-left: auto;
@@ -867,7 +951,7 @@
             border-radius: var(--border-radius-xl);
             transition: all var(--transition-normal);
             overflow: hidden;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             will-change: transform;
             min-width: 200px;
             text-align: center;
@@ -906,9 +990,9 @@
         }
 
         .btn-primary {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             color: var(--text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         @media (min-width: 1024px) {
@@ -918,9 +1002,9 @@
         }
 
         .btn-outline {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             color: var(--text-inverse);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         /* FLOATING ACTION BUTTON - Hidden on mobile */
@@ -970,7 +1054,7 @@
             bottom: var(--spacing-xl);
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
             animation: bounce 2s infinite;
             display: none;
@@ -1067,6 +1151,11 @@
             margin-bottom: var(--spacing-md);
             line-height: 1.2;
             animation: slideInFromBottom 0.8s ease-out 0.2s both;
+            color: var(--text-primary);
+        }
+
+        .section-dark .section-title {
+            color: var(--text-inverse);
         }
 
         @media (min-width: 640px) {
@@ -1101,6 +1190,10 @@
             margin: 0 auto;
             animation: fadeIn 0.8s ease-out 0.4s both;
             line-height: 1.6;
+        }
+
+        .section-dark .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         @media (min-width: 768px) {
@@ -1142,12 +1235,14 @@
             transition: all var(--transition-normal);
             overflow: hidden;
             height: 100%;
+            box-shadow: var(--shadow-sm);
         }
 
         @media (min-width: 768px) {
             .card {
                 border-radius: var(--border-radius-2xl);
                 padding: var(--spacing-2xl);
+                box-shadow: var(--shadow-md);
             }
         }
 
@@ -1177,28 +1272,46 @@
         }
 
         .card-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: var(--gradient-glow);
             border-radius: var(--border-radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: var(--spacing-md);
             animation: cardIconFloat 3s ease-in-out infinite;
             color: white;
-            font-weight: 600;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
         }
 
         @media (min-width: 768px) {
             .card-icon {
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
                 border-radius: var(--border-radius-xl);
-                font-size: 1.5rem;
+                font-size: 1.75rem;
                 margin-bottom: var(--spacing-lg);
             }
+        }
+
+        .card-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-accent);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .card:hover .card-icon::before {
+            opacity: 0.8;
         }
 
         @keyframes cardIconFloat {
@@ -1225,7 +1338,7 @@
             color: var(--text-secondary);
             margin-bottom: var(--spacing-md);
             line-height: 1.6;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         @media (min-width: 768px) {
@@ -1245,13 +1358,13 @@
             gap: var(--spacing-sm);
             margin-bottom: var(--spacing-sm);
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             line-height: 1.5;
         }
 
         @media (min-width: 768px) {
             .card-feature {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
         }
 
@@ -1279,22 +1392,22 @@
             right: 0;
             bottom: 0;
             background: var(--gradient-mesh);
-            opacity: 0.05;
+            opacity: 0.08;
         }
 
         @media (min-width: 768px) {
             .stats::before {
-                opacity: 0.1;
+                opacity: 0.12;
             }
         }
 
         .stat-card {
             text-align: center;
             padding: var(--spacing-lg);
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
             border-radius: var(--border-radius-xl);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             transition: all var(--transition-normal);
         }
 
@@ -1302,13 +1415,14 @@
             .stat-card {
                 padding: var(--spacing-2xl);
                 border-radius: var(--border-radius-2xl);
+                background: rgba(255, 255, 255, 0.1);
             }
         }
 
         @media (min-width: 1024px) {
             .stat-card:hover {
                 transform: translateY(-5px);
-                background: rgba(255, 255, 255, 0.1);
+                background: rgba(255, 255, 255, 0.15);
             }
         }
 
@@ -1338,9 +1452,9 @@
         }
 
         .stat-label {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             line-height: 1.4;
         }
 
@@ -1551,12 +1665,12 @@
             right: 0;
             bottom: 0;
             background: var(--gradient-mesh);
-            opacity: 0.02;
+            opacity: 0.05;
         }
 
         @media (min-width: 768px) {
             footer::before {
-                opacity: 0.05;
+                opacity: 0.08;
             }
         }
 
@@ -1599,7 +1713,7 @@
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             line-height: 1.6;
             transition: color var(--transition-normal);
@@ -1619,10 +1733,10 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
             padding-top: var(--spacing-md);
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.8rem;
             line-height: 1.5;
         }
@@ -1752,6 +1866,13 @@
     <div class="custom-cursor" id="cursor"></div>
     <div class="cursor-trail" id="cursorTrail"></div>
 
+    <!-- Enhanced Interactive Background -->
+    <div class="interactive-bg">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+    </div>
+
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
@@ -1800,7 +1921,7 @@
                     
                     <div class="btn-group">
                         <a href="#kontakt" class="btn btn-primary">
-                            Bezpłatna konsultacja
+                            Bezpłatna konsultacja 15-20 min
                         </a>
                         <a href="#uslugi" class="btn btn-outline">
                             Zobacz możliwości
@@ -1826,7 +1947,7 @@
 
                 <div class="grid grid-auto">
                     <article class="card scroll-reveal">
-                        <div class="card-icon">WD</div>
+                        <div class="card-icon">🚀</div>
                         <h3 class="card-title">Kompleksowe wdrożenia Base</h3>
                         <p class="card-description">Pełna konfiguracja nowego środowiska z optymalizacją pod kątem wygody i efektywności pracy Twojego zespołu.</p>
                         <ul class="card-features">
@@ -1838,7 +1959,7 @@
                     </article>
 
                     <article class="card scroll-reveal">
-                        <div class="card-icon">MG</div>
+                        <div class="card-icon">📦</div>
                         <h3 class="card-title">Zarządzanie magazynem</h3>
                         <p class="card-description">Wdrożenie zaawansowanego magazynu Base z automatyczną synchronizacją i inteligentnym zarządzaniem ofertami.</p>
                         <ul class="card-features">
@@ -1850,7 +1971,7 @@
                     </article>
 
                     <article class="card scroll-reveal">
-                        <div class="card-icon">AU</div>
+                        <div class="card-icon">⚡</div>
                         <h3 class="card-title">Automatyzacja procesów</h3>
                         <p class="card-description">Zaawansowane reguły automatyczne i szablony dla maksymalnej efektywności i eliminacji powtarzalnych zadań.</p>
                         <ul class="card-features">
@@ -1862,7 +1983,7 @@
                     </article>
 
                     <article class="card scroll-reveal">
-                        <div class="card-icon">PK</div>
+                        <div class="card-icon">📋</div>
                         <h3 class="card-title">Asystent Pakowania</h3>
                         <p class="card-description">Usprawnienie pracy zespołu magazynowego poprzez automatyczne działania i dokumentację procesów.</p>
                         <ul class="card-features">
@@ -1874,7 +1995,7 @@
                     </article>
 
                     <article class="card scroll-reveal">
-                        <div class="card-icon">IN</div>
+                        <div class="card-icon">🔗</div>
                         <h3 class="card-title">Integracje zewnętrzne</h3>
                         <p class="card-description">Połączenia z systemami ERP, księgowymi, kurierami i marketplace'ami wymagające autorskich rozwiązań programistycznych.</p>
                         <ul class="card-features">
@@ -1886,7 +2007,7 @@
                     </article>
 
                     <article class="card scroll-reveal">
-                        <div class="card-icon">PR</div>
+                        <div class="card-icon">💻</div>
                         <h3 class="card-title">Rozwiązania programistyczne</h3>
                         <p class="card-description">Dedykowane aplikacje na potrzeby e-commerce - od prostych kalkulatorów po zaawansowane narzędzia biznesowe.</p>
                         <ul class="card-features">
@@ -1914,16 +2035,16 @@
                         <span class="stat-label">lat doświadczenia z Base</span>
                     </div>
                     <div class="stat-card scroll-reveal">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">lat prowadzenia biznesu</span>
+                    </div>
+                    <div class="stat-card scroll-reveal">
                         <span class="stat-number">150+</span>
                         <span class="stat-label">zrealizowanych projektów</span>
                     </div>
                     <div class="stat-card scroll-reveal">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">wsparcie techniczne</span>
-                    </div>
-                    <div class="stat-card scroll-reveal">
-                        <span class="stat-number">0 zł</span>
-                        <span class="stat-label">pierwsza konsultacja</span>
+                        <span class="stat-number">15-20</span>
+                        <span class="stat-label">minut pierwsza konsultacja</span>
                     </div>
                 </div>
             </div>
@@ -1940,13 +2061,13 @@
                 <div class="grid grid-2">
                     <div class="scroll-reveal">
                         <div class="card">
-                            <div class="card-icon">FI</div>
+                            <div class="card-icon">🎯</div>
                             <h3 class="card-title">Moja filozofia pracy</h3>
                             <p class="card-description">
-                                <strong>Z Base pracuję nieprzerwanie od 2019 roku.</strong> Współpracuję z firmami, które potrzebują stabilnych, wydajnych i skalowalnych rozwiązań — bez kompromisów.
+                                <strong>Z Base pracuję nieprzerwanie od 2019 roku.</strong> Prowadzę biznes od 10 lat, dzięki czemu doskonale znam go od podszewki. Jestem osobą techniczną, dla której automatyzacja to nie tylko praca, ale duża część życia.
                             </p>
                             <p class="card-description">
-                                Skupiam się na firmach, które chcą skalować i profesjonalizować sprzedaż. Nie rozdrabniam się — dostarczam realne, mierzalne usprawnienia.
+                                <strong>Interesują mnie długie relacje z klientami.</strong> Zależy mi na budowaniu relacji na lata. Oprócz wdrożeń prowadzę również sklepy internetowe i sprzedaż online.
                             </p>
                             <p class="card-description">
                                 <strong>Twój e-commerce może działać sprawniej. Ja wiem jak to zrobić.</strong>
@@ -1956,34 +2077,36 @@
 
                     <div class="scroll-reveal">
                         <div class="card">
-                            <div class="card-icon">RT</div>
-                            <h3 class="card-title">Dodatkowe projekty</h3>
+                            <div class="card-icon">🎓</div>
+                            <h3 class="card-title">Edukacja i wsparcie</h3>
                             <p class="card-description">
-                                Współtworzę również <strong>Retixly.website</strong> - innowacyjną platformę do kompleksowych audytów UX, SEO i bezpieczeństwa z wykorzystaniem sztucznej inteligencji.
+                                <strong>Oprócz wdrożeń, ważne jest dla mnie edukowanie klientów.</strong> Dzięki temu, po moim wdrożeniu klienci są w stanie samodzielnie modyfikować niektóre elementy systemów.
                             </p>
                             <p class="card-description">
-                                To jeden z moich większych projektów życiowych, który planuję rozwijać i udoskonalać, oferując najnowocześniejsze rozwiązania analityczne dla biznesu online.
+                                Zapewniam wsparcie, rozwój i doradztwo technologiczne na każdym etapie. Nie rozdrabniam się — dostarczam realne, mierzalne usprawienia dla firm, które chcą skalować sprzedaż.
                             </p>
-                            <div style="margin-top: var(--spacing-lg);">
-                                <a href="https://retixly.website" target="_blank" rel="noopener" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary); min-width: auto;">
-                                    Sprawdź Retixly
-                                </a>
-                            </div>
+                            <p class="card-description">
+                                <strong>Pierwsze konsultacje są bezpłatne (15-20 minut).</strong>
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="scroll-reveal" style="margin-top: var(--spacing-2xl);">
                     <div class="card" style="text-align: center;">
-                        <h3 class="card-title">Sposób pracy</h3>
+                        <div class="card-icon">🔬</div>
+                        <h3 class="card-title">Dodatkowe projekty</h3>
                         <p class="card-description">
-                            Zapewniam wsparcie, rozwój i doradztwo technologiczne na każdym etapie. 
-                            <strong>Pierwsze konsultacje są bezpłatne.</strong>
+                            Współtworzę również <strong>Retixly.website</strong> - innowacyjną platformę do kompleksowych audytów UX, SEO i bezpieczeństwa z wykorzystaniem sztucznej inteligencji.
                         </p>
                         <p class="card-description">
-                            Pracuję zdalnie na terenie całej Polski, a także stacjonarnie — jeśli sytuacja tego wymaga. 
-                            Posiadam liczne referencje oraz wieloletnie doświadczenie we wdrażaniu Base, programowaniu oraz integracji zewnętrznych systemów.
+                            To jeden z moich większych projektów życiowych, który planuję rozwijać i udoskonalać, oferując najnowocześniejsze rozwiązania analityczne dla biznesu online.
                         </p>
+                        <div style="margin-top: var(--spacing-lg);">
+                            <a href="https://retixly.website" target="_blank" rel="noopener" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary); min-width: auto;">
+                                Sprawdź Retixly
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1995,7 +2118,7 @@
                 <div class="section-header scroll-reveal">
                     <div class="section-badge">KONTAKT</div>
                     <h2 class="section-title">Rozpocznijmy <span class="text-gradient">współpracę</span></h2>
-                    <p class="section-subtitle">Pierwsze konsultacje są bezpłatne. Zobaczmy, jak działa Twój system i co można zoptymalizować.</p>
+                    <p class="section-subtitle">Pierwsze konsultacje są bezpłatne (15-20 minut). Zobaczmy, jak działa Twój system i co można zoptymalizować.</p>
                 </div>
 
                 <div class="contact-grid">
@@ -2037,7 +2160,7 @@
                     <div class="calendar-container scroll-reveal">
                         <h3 style="margin-bottom: var(--spacing-md); color: var(--text-primary); font-size: 1.25rem;">Umów bezpłatną konsultację</h3>
                         <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md); line-height: 1.6; font-size: 0.9rem;">
-                            Wybierz dogodny termin na 30-minutową rozmowę o Twoim projekcie. Podczas konsultacji omówimy:
+                            Wybierz dogodny termin na 15-20 minutową rozmowę o Twoim projekcie. Podczas konsultacji omówimy:
                         </p>
                         <ul style="list-style: none; margin-bottom: var(--spacing-md); color: var(--text-secondary); font-size: 0.85rem;">
                             <li style="margin-bottom: var(--spacing-xs);">✓ Obecne wyzwania w Twoim e-commerce</li>
@@ -2185,17 +2308,17 @@
             });
         }
 
-        // Optimized Floating Particles
+        // Enhanced Floating Particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = window.innerWidth < 768 ? 20 : 40; // Fewer particles on mobile
+            const particleCount = window.innerWidth < 768 ? 30 : 60; // More particles for better effect
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particle.style.animationDelay = Math.random() * 25 + 's';
+                particle.style.animationDuration = (Math.random() * 15 + 20) + 's';
                 particlesContainer.appendChild(particle);
             }
         }
@@ -2366,13 +2489,19 @@
         let ticking = false;
 
         function updateAnimations() {
-            // Parallax effects only on desktop to avoid performance issues
+            // Enhanced parallax effects for desktop
             if (window.innerWidth >= 1024) {
                 const scrolled = window.pageYOffset;
-                const rate = scrolled * -0.3;
+                const rate = scrolled * -0.2;
                 
                 document.querySelectorAll('.hero-shapes .morphing-shape').forEach((shape, index) => {
-                    shape.style.transform = `translateY(${rate * (index + 1) * 0.2}px)`;
+                    shape.style.transform = `translateY(${rate * (index + 1) * 0.3}px)`;
+                });
+                
+                // Interactive background orbs
+                document.querySelectorAll('.bg-orb').forEach((orb, index) => {
+                    const offset = rate * (index + 1) * 0.1;
+                    orb.style.transform = `translateY(${offset}px)`;
                 });
             }
             
@@ -2386,7 +2515,7 @@
             }
         }
 
-        // Only add parallax on desktop
+        // Only add parallax on desktop for performance
         if (window.innerWidth >= 1024) {
             window.addEventListener('scroll', requestTick);
         }
@@ -2429,22 +2558,24 @@
             }, 250);
         });
 
-        // Preload critical resources
-        const criticalResources = [
-            'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
-        ];
+        // Enhanced mouse interaction effects
+        if (window.innerWidth >= 1024) {
+            document.addEventListener('mousemove', (e) => {
+                const mouseXPercent = e.clientX / window.innerWidth;
+                const mouseYPercent = e.clientY / window.innerHeight;
+                
+                // Subtle background orb movement based on mouse position
+                document.querySelectorAll('.bg-orb').forEach((orb, index) => {
+                    const intensity = (index + 1) * 10;
+                    const xMove = (mouseXPercent - 0.5) * intensity;
+                    const yMove = (mouseYPercent - 0.5) * intensity;
+                    orb.style.transform = `translate(${xMove}px, ${yMove}px)`;
+                });
+            });
+        }
 
-        criticalResources.forEach(href => {
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.as = 'style';
-            link.href = href;
-            document.head.appendChild(link);
-        });
-
-        // Console log for development
-        console.log('%c🚀 BaseExpert - Ultra Modern Website Loaded!', 'background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; padding: 10px; border-radius: 5px; font-weight: bold;');
-        console.log('Mobile-first responsive design with enhanced performance optimizations.');
+        console.log('%c🚀 BaseExpert - Enhanced Interactive Website Loaded!', 'background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; padding: 10px; border-radius: 5px; font-weight: bold;');
+        console.log('Mobile-first responsive design with enhanced interactive background and performance optimizations.');
     </script>
 </body>
 </html>
